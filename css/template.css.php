@@ -44,9 +44,15 @@ function compress($buffer) {
 }
 
 if ($bootstrap==1) require('bootstrap.css');
-if ($bootstrap==0) require('reset.css');
-                   require('template.css');
 if ($bootstrap==1) require('bootstrap-responsive.css');
+
+
+if ($bootstrap==0) require('reset.css');
+if ($bootstrap==0) require('template.css');
+if ($bootstrap==0) require('mason.css');
+
+
+
 
 require('../../../media/system/css/system.css');
 require('../../system/css/system.css');
