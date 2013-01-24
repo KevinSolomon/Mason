@@ -19,11 +19,15 @@ header($ExpStr);
 
 // parameter
 $bootstrap = $_GET['b'];
+$mootools = $_GET['m'];
 
 if ($bootstrap==1) require('jquery-1.8.3.min.js');
 if ($bootstrap==1) require('bootstrap.min.js');
 
-require('../../../media/system/js/mootools-core.js');
-require('../../../media/system/js/core.js');
-require('../../../media/system/js/caption.js');
+if($mootools==1){
+	require('../../../media/system/js/mootools-core.js');
+	require('../../../media/system/js/core.js');
+	require('../../../media/system/js/caption.js');
+}
+
 ?>

@@ -3,13 +3,13 @@
 
 <extension version="2.5" type="template" method="upgrade">
 	
-	<name>mason</name><!-- name the template -->
-	<creationDate>2013-01-17</creationDate><!-- the date your are beginn to code -->
-	<author>KevinSolomon</author><!-- your name (oops, I repeat myself) -->
-	<copyright>Copyright © xxxx KevinSolomon.com</copyright><!-- for who you are coding -->
-	<authorEmail>kevin@KevinSolomon.com</authorEmail><!-- your email address -->
-	<authorUrl>http://www.KevinSolomon.com</authorUrl><!-- your url -->
-	<version>1.0.0</version><!-- give your template a number -->
+	<name>mason</name>
+	<creationDate>2013-01-17</creationDate>
+	<author>KevinSolomon</author>
+	<copyright>Copyright © xxxx KevinSolomon.com</copyright>
+	<authorEmail>kevin@KevinSolomon.com</authorEmail>
+	<authorUrl>http://www.KevinSolomon.com</authorUrl>
+	<version>1.0.0</version>
 	<description><![CDATA[ 
 		<h1>mason</h1>
 		<p><img src="../templates/mason/template_preview.png" /></p>
@@ -18,7 +18,7 @@
 			<li>debug</li>
 		</ol>
 		<p>Created by <a href="http://www.KevinSolomon.com" target="_blank">KevinSolomon | KevinSolomon.com</a>.</p>
-	]]></description><!-- change the description as you like -->
+	]]></description>
 	
 	<files><!-- no need to change -->
 		<folder>css</folder>
@@ -50,45 +50,49 @@
 	<config><!-- no need to change -->
 		<fields name="params">
 			<fieldset name="basic">
-			  <!-- MODERNIZR-->
-  			  <field name="modernizr" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DESC">
+			  	<!-- MODERNIZR-->
+  			  	<field name="modernizr" type="radio" default="1" label="TPL_MASON_PARAMETER_MODERNIZR_LABEL" description="TPL_MASON_PARAMETER_MODERNIZR_DESC">
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
-		    <!-- TWITTER BOOTSTRAP-->
-  		    <field name="bootstrap" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_LABEL" description="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DESC">
+  				
+		    	<!-- TWITTER BOOTSTRAP CSS ONLY-->
+  		    	<field name="bootstrapcss" type="radio" default="0" label="TPL_MASON_PARAMETER_BOOTSTRAPCSS_LABEL" description="TPL_MASON_PARAMETER_BOOTSTRAPCSS_DESC">
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
-                <!-- MODERNIZR-->
-                <field name="mootools" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_MOOTOOLS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_MOOTOOLS_DESC">
+  				
+  				<!-- TWITTER BOOTSTRAP JS ONLY-->
+  				<field name="bootstrapjs" type="radio" default="0" label="TPL_MASON_PARAMETER_BOOTSTRAPJS_LABEL" description="TPL_MASON_PARAMETER_BOOTSTRAPJS_DESC">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+  					
+                <!-- LOAD MOOTOOLS-->
+                <field name="mootools" type="radio" default="0" label="TPL_MASON_PARAMETER_MOOTOOLS_LABEL" description="TPL_MASON_PARAMETER_MOOTOOLS_DESC">
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </field>
-                <field name="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DOC" type="spacer" hr="false" />
-                <field type="spacer" hr="true" />
-				<!-- PIE-->
-  				<field name="pie" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
+
+				<!--LOAD PIE-->
+  				<field name="pie" type="radio" default="1" label="TPL_MASON_PARAMETER_PIE_LABEL" description="TPL_MASON_PARAMETER_PIE_DESC">
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_PIE_DOC" type="spacer" hr="false" />
+
                 <!--- FRONTPAGE COMPONENT HIDE -->
-                <field name="frontpage" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_FRONTPAGE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_FRONTPAGE_DESC">
+                <field name="frontpage" type="radio" default="1" label="TPL_MASON_PARAMETER_FRONTPAGE_LABEL" description="TPL_MASON_PARAMETER_FRONTPAGE_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-                <field name="TPL_TEMPLATENAME_PARAMETER_FRONTPAGE_DOC" type="spacer" hr="false" />
-                <!--- FRONTPAGE COMPONENT HIDE -->
-                <field name="loadGeneratorTag" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_GENERATOR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_GENERATOR_DESC">
+
+                <!--- FRONTPAGE GENERATOR TAG -->
+                <field name="loadGeneratorTag" type="radio" default="1" label="TPL_MASON_PARAMETER_GENERATOR_LABEL" description="TPL_MASON_PARAMETER_GENERATOR_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-                <field name="TPL_TEMPLATENAME_PARAMETER_GENERATOR_DOC" type="spacer" hr="false" />
+
+
 			</fieldset>
 		</fields>
 	</config>

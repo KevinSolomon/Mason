@@ -14,10 +14,13 @@ defined( '_JEXEC' ) or die;
 $loadModernizr = $this->params->get('modernizr');
 
 # Load BootStrap
-$loadBootstrap = $this->params->get('bootstrap');
+$loadBootstrapCss = $this->params->get('bootstrapcss');
+
+$loadBootstrapJs = $this->params->get('bootstrapjs');
 
 # Load Mootools
 $loadMootools = $this->params->get('mootools');
+
 
 # If Load Mootools is NO then run this block to remove Mootools
 if ( !$loadMootools ) {
@@ -70,7 +73,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$loadBootstrap.'&amp;v=1');
+$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$loadBootstrapCss.'&amp;v=1');
 if ($loadModernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js'); // <- this script must be in the head
 
 // unset scripts, put them into /js/template.js.php to minify http requests

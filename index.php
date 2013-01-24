@@ -17,7 +17,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/mason.php';
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="<?php echo $this->language; ?>"> <![endif]-->
 <!--[if gt IE 8]><!-->  <html class="no-js" lang="<?php echo $this->language; ?>"> <!--<![endif]-->
 <head>
-  <script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php?b='.$bootstrap.'&amp;v=1'; ?>"></script>
+  <script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php?b='.$loadBootstrapJs.'&amp;v=1'.'&amp;m='.$loadMootools; ?>"></script>
   <jdoc:include type="head" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> <!-- mobile viewport -->
   <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/apple-touch-icon-57x57.png"> <!-- iphone, ipod, android -->
