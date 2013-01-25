@@ -102,7 +102,7 @@
 				<field name="analytics" type="text" default="UA-XXXXX-X" label="Google Analytics ID" description="Change UA-XXXXX-X to be your site's ID" size="15" filter="raw" />	
 
 				<!--- GOOGLE WEB FONTS CODE  -->				
-				<field name="googleWebFonts" type="text" default="copy the css link from Google here" label="Google Web Fonts collection" description="Paste in the link to the Google Web fonts collection that you want to be available to use in style.css. Visit http://code.google.com/webfonts, build a collection and then copy the link here" filter="raw" size="160" />
+				<field name="googleWebFonts" type="text" default="copy the css link from Google here" label="Google Web Fonts" description="Paste in the link to the Google Web fonts collection that you want to be available to use in style.css. Visit http://code.google.com/webfonts, build a collection and then copy the link here" filter="raw" size="160" />
 
 
 			</fieldset>
