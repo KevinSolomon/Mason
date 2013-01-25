@@ -53,7 +53,7 @@ if ($currentMenu->getActive() == $currentMenu->getDefault())
 
 
 # Load the Generator Tag content
-$loadGeneratorTag = $this->params->get('loadGeneratorTag');
+$loadGeneratorTag = $this->params->get('setGeneratorTag');
 
 # Set the Generator tag content
 $this->setGenerator($loadGeneratorTag);

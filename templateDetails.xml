@@ -87,10 +87,17 @@
                 </field>
 
                 <!--- FRONTPAGE GENERATOR TAG -->
-                <field name="loadGeneratorTag" type="radio" default="1" label="TPL_MASON_PARAMETER_GENERATOR_LABEL" description="TPL_MASON_PARAMETER_GENERATOR_DESC">
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
+                <field name="setGeneratorTag" type="text" default="Mason Framwork  - A Joomla 3.0 ! templates - http://kevinsolomon.com" label="Generator Meta Tag" description="Customise the generator meta tag output by your template." size="80" />
+
+                <!--- GOOGLE VERIFICATION CODE  -->
+				<field name="verification" type="text" default="Content_string_Google_gives_you" label="Google verification meta" description="Change Content_string_Google_gives_you to the meta content value Google gave in their code. You only need the content value, not the complete code" filter="raw" size="80" />
+
+
+				<!--- GOOGLE ANALYTICS CODE  -->
+				<field name="analytics" type="text" default="UA-XXXXX-X" label="Google Analytics ID" description="Change UA-XXXXX-X to be your site's ID" size="15" filter="raw" />	
+
+				<!--- GOOGLE WEB FONTS CODE  -->				
+				<field name="googleWebFonts" type="text" default="copy the css link from Google here" label="Google Web Fonts collection" description="Paste in the link to the Google Web fonts collection that you want to be available to use in style.css. Visit http://code.google.com/webfonts, build a collection and then copy the link here" filter="raw" size="160" />
 
 
 			</fieldset>
