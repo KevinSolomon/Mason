@@ -15,6 +15,47 @@
 		<p><img src="../templates/mason/template_preview.png" /></p>
 		<h2>Module positions</h2>
 		<ol>
+			<li>head-search</li>
+			<li>mainnav</li>
+			<li>navhelper</li>
+			<li>breadcrumbs</li>
+			<li>sidebar-1</li>
+			<li>sidebar-2</li>
+			<li>mast-col</li>
+			<li>footer</li>
+			<li>home-0</li>
+			<li>home-1</li>
+			<li>home-2</li>
+			<li>home-3</li>
+			<li>home-4</li>
+			<li>home-5</li>
+			<li>Position-0</li>
+			<li>Position-1</li>
+			<li>Position-2</li>
+			<li>Position-3</li>
+			<li>Position-4</li>
+			<li>Position-5</li>
+			<li>Position-6</li>
+			<li>Position-7</li>
+			<li>Position-8</li>
+			<li>Position-9</li>
+			<li>Position-10</li>
+			<li>Position-11</li>
+			<li>Position-12</li>
+			<li>Position-13</li>
+			<li>Position-14</li>
+			<li>Position-15</li>
+			<li>footer-0</li>
+			<li>footer-1</li>
+			<li>footer-2</li>
+			<li>footer-3</li>
+			<li>footer-4</li>
+			<li>footer-5</li>
+			<li>footer-6</li>
+			<li>footer-7</li>
+			<li>footer-8</li>
+			<li>footer-9</li>
+			<li>footer-10</li>
 			<li>debug</li>
 		</ol>
 		<p>Created by <a href="http://www.KevinSolomon.com" target="_blank">KevinSolomon | KevinSolomon.com</a>.</p>
@@ -43,11 +84,52 @@
 		<language tag="en-GB">en-GB.tpl_mason.ini</language>
 	</languages>
 	
-	<positions><!-- define the positions for modules here -->
+	<positions>
+		<position>head-search</position>
+		<position>mainnav</position>
+		<position>navhelper</position>
+		<position>breadcrumbs</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>mast-col</position>
+		<position>footer</position>
+		<position>home-0</position>
+		<position>home-1</position>
+		<position>home-2</position>
+		<position>home-3</position>
+		<position>home-4</position>
+		<position>home-5</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>footer-0</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>footer-7</position>
+		<position>footer-8</position>
+		<position>footer-9</position>
+		<position>footer-10</position>
 		<position>debug</position>
 	</positions>
 	
-	<config><!-- no need to change -->
+	<config>
 		<fields name="params">
 			<fieldset name="basic">
 			  	<!-- MODERNIZR-->
