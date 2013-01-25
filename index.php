@@ -34,6 +34,17 @@ include_once JPATH_THEMES . '/' . $this->template . '/mason.php';
 	
 <body class="<?php echo $pageclass; ?>">
   <jdoc:include type="modules" name="debug" />
+  <?php if ($loadGoogleanalytics != "UA-XXXXX-X") : ?>
+
+  <script>
+    var _gaq=[['_setAccount','<?php echo htmlspecialchars($loadGoogleanalytics); ?>'],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+<?php endif; ?>
+<noscript>JavaScript is unavailable or disabled; so you are probably going to miss out on a few things. Everything should still work, but with a little less pzazz!</noscript>
+</body>
 </body>
 </html>
 

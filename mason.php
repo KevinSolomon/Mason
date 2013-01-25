@@ -32,10 +32,14 @@ $doc->addCustomTag('<script src="'.$tpath.'/js/selectivizr-min.js"></script>');
 $doc->addCustomTag('<![endif]-->');
 }
 
-# Load BootStrap
+# Load BootStrap CSS
 $loadBootstrapCss = $this->params->get('bootstrapcss');
 
+# Load BootStrap JS
 $loadBootstrapJs = $this->params->get('bootstrapjs');
+
+# Load Google JS
+$loadGoogleanalytics  = $this->params->get('analytics');
 
 # Load Mootools
 $loadMootools = $this->params->get('mootools');
