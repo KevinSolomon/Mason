@@ -55,6 +55,11 @@
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
+
+  				<field name="badbrowser" type="radio" default="0" label="Support bad browsers?" description="Enabling this will load some additional JS to add media query support and CSS3 psuedo selectors to browsers that don't natively support them (IE8 and below)">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
   				
 		    	<!-- TWITTER BOOTSTRAP CSS ONLY-->
   		    	<field name="bootstrapcss" type="radio" default="0" label="TPL_MASON_PARAMETER_BOOTSTRAPCSS_LABEL" description="TPL_MASON_PARAMETER_BOOTSTRAPCSS_DESC">

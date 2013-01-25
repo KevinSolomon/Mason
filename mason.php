@@ -8,10 +8,29 @@
 
 defined( '_JEXEC' ) or die;
 
+
+# Pre-requisite's Joomla Variables
+$app = JFactory::getApplication();
+$doc = JFactory::getDocument();
+$params = $app->getParams();
+$pageclass = $params->get('pageclass_sfx'); // parameter (menu entry)
+$tpath = $this->baseurl.'/templates/'.$this->template;
+
 #Template Param for Conditional Loading
 
 # Load Modernizr
 $loadModernizr = $this->params->get('modernizr');
+
+#Load Support For Bad Browsers
+$badBrowser = $this->params->get('badbrowser');
+
+if ($badBrowser) 
+{
+$doc->addCustomTag('<!--[if (lt IE 9) & (!IEMobile)]>');
+$doc->addCustomTag('<script src="'.$tpath.'/js/respond.min.js"></script>');
+$doc->addCustomTag('<script src="'.$tpath.'/js/selectivizr-min.js"></script>');
+$doc->addCustomTag('<![endif]-->');
+}
 
 # Load BootStrap
 $loadBootstrapCss = $this->params->get('bootstrapcss');
@@ -56,24 +75,22 @@ if ($currentMenu->getActive() == $currentMenu->getDefault())
 $loadGeneratorTag = $this->params->get('setGeneratorTag');
 
 # Set the Generator tag content
-$this->setGenerator($loadGeneratorTag);
+if(isset($loadGeneratorTag) && $loadGeneratorTag != null){ 
+   $this->setGenerator($loadGeneratorTag);
+}
+else {
+    $this->setGenerator(null);    
+}
 
-
-
-
-
-// variables
-$app = JFactory::getApplication();
-$doc = JFactory::getDocument();
-$params = $app->getParams();
-$pageclass = $params->get('pageclass_sfx'); // parameter (menu entry)
-$tpath = $this->baseurl.'/templates/'.$this->template;
-
-
-$this->setGenerator(null);
-
-// load sheets and scripts
+# Load Style-Sheets
 $doc->addStyleSheet($tpath.'/css/template.css.php?b='.$loadBootstrapCss.'&amp;v=1');
+
+# Load Google fonts styles
+$loadGooglewebfonts = $this->params->get('googleWebFonts');
+
+if ($loadGooglewebfonts != "copy the css link from Google here") {
+$doc->addStyleSheet(''.$loadGooglewebfonts.'');
+}
 if ($loadModernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js'); // <- this script must be in the head
 
 // unset scripts, put them into /js/template.js.php to minify http requests
