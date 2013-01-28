@@ -17,7 +17,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/mason.php';
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="<?php echo $this->language; ?>"> <![endif]-->
 <!--[if gt IE 8]><!-->  <html class="no-js" lang="<?php echo $this->language; ?>"> <!--<![endif]-->
 <head>
-  <script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php?b='.$loadBootstrapJs.'&amp;v=1'.'&amp;m='.$loadMootools; ?>"></script>
+  <script type="text/javascript" src="<?php echo $tpath.'/js/mason.js.php?b='.$loadBootstrapJs.'&amp;v=1'.'&amp;m='.$loadMootools; ?>"></script>
   <jdoc:include type="head" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> <!-- mobile viewport -->
   <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/apple-touch-icon-57x57.png"> <!-- iphone, ipod, android -->
@@ -33,8 +33,13 @@ include_once JPATH_THEMES . '/' . $this->template . '/mason.php';
 </head>
 	
 <body class="<?php echo $pageclass; ?>">
-  <jdoc:include type="modules" name="debug" />
-  <?php if ($loadGoogleanalytics != "UA-XXXXX-X") : ?>
+  <div id="beforeLoad" class="span12">
+    <jdoc:include type="modules" name="before-load"/>
+  </div>
+
+
+
+<?php if ($loadGoogleanalytics != "UA-XXXXX-X") : ?>
 
   <script>
     var _gaq=[['_setAccount','<?php echo htmlspecialchars($loadGoogleanalytics); ?>'],["_trackPageview"]];
@@ -42,9 +47,10 @@ include_once JPATH_THEMES . '/' . $this->template . '/mason.php';
     g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
     s.parentNode.insertBefore(g,s)}(document,"script"));
   </script>
+
 <?php endif; ?>
+
 <noscript>JavaScript is unavailable or disabled; so you are probably going to miss out on a few things. Everything should still work, but with a little less pzazz!</noscript>
-</body>
 </body>
 </html>
 

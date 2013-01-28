@@ -87,7 +87,7 @@ else {
 }
 
 # Load Style-Sheets
-$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$loadBootstrapCss.'&amp;v=1');
+$doc->addStyleSheet($tpath.'/css/mason.css.php?b='.$loadBootstrapCss.'&amp;v=1');
 
 # Load Google fonts styles
 $loadGooglewebfonts = $this->params->get('googleWebFonts');
