@@ -1,9 +1,9 @@
-<?php  
+<?php
 /*------------------------------------------------------------------------
-# author    your name or company
-# copyright Copyright (C) 2011 example.com. All rights reserved.
+# author    Kevin Solomon
+# copyright Copyright © 2013 kevinsolomon.com. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website   http://www.example.com
+# Website   http://www.kevinsolomon.com
 -------------------------------------------------------------------------*/
 
 defined('_JEXEC') or die;

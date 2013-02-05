@@ -1,9 +1,9 @@
 <?php
 /*------------------------------------------------------------------------
-# author    Kevin Solomon
-# copyright Copyright © 2013 kevinsolomon.com. All rights reserved.
+# author    your name or company
+# copyright Copyright © 2011 example.com. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website   http://www.kevinsolomon.com
+# Website   http://www.example.com
 -------------------------------------------------------------------------*/
 
 // required header info and character set
@@ -19,15 +19,11 @@ header($ExpStr);
 
 // parameter
 $bootstrap = $_GET['b'];
-$mootools = $_GET['m'];
 
 if ($bootstrap==1) require('jquery-1.8.3.min.js');
-if ($bootstrap==1) require('bootstrap.min.js');
+if ($bootstrap==1) require('bootstrap/bootstrap.min.js');
 
-if($mootools==1){
-	require('../../../media/system/js/mootools-core.js');
-	require('../../../media/system/js/core.js');
-	require('../../../media/system/js/caption.js');
-}
-
+require('../../../media/system/js/mootools-core.js');
+require('../../../media/system/js/core.js');
+require('../../../media/system/js/caption.js');
 ?>

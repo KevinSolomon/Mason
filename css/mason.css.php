@@ -5,6 +5,7 @@
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.kevinsolomon.com
 -------------------------------------------------------------------------*/
+
 // parameter
 $bootstrap = $_GET['b'];
 
@@ -43,16 +44,18 @@ function compress($buffer) {
 	return $buffer;
 }
 
-if ($bootstrap==1) require('bootstrap.css');
-if ($bootstrap==1) require('bootstrap-responsive.css');
-
-
-if ($bootstrap==0) require('reset.css');
-if ($bootstrap==0) require('template.css');
-if ($bootstrap==0) require('mason.css');
-
-
-
+if ($bootstrap==1)
+{
+    require('bootstrap/bootstrap.css');
+    require('bootstrap/bootstrap-responsive.css');
+    require('template.css');
+}
+else if ($bootstrap==0){
+    require('reset.css');
+    require('template.css');
+    require('foundation/foundation.css');
+    require('foundation/app.css');
+}
 
 require('../../../media/system/css/system.css');
 require('../../system/css/system.css');
